@@ -19,4 +19,4 @@ A WPF application for managing appointments, allowing users to add, edit, and de
 - Visual Studio
 
 ## Database Setup
-1. Create a database named `uservs` and run the following SQL to create the `Appointments` table and users table.
+1. Create a database named `uservs` and run the following SQL to create the `Appointments` table and users 'table'.
