@@ -1,0 +1,137 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login Page" Height="450" Width="800" ResizeMode="CanResizeWithGrip">
+
+    <Grid>
+        <!-- Define columns and rows for centering content -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- Left Spacer -->
+            <ColumnDefinition Width="Auto"/>
+            <!-- Center Column (content) -->
+            <ColumnDefinition Width="*"/>
+            <!-- Right Spacer -->
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Top Spacer -->
+            <RowDefinition Height="Auto"/>
+            <!-- Content Row -->
+            <RowDefinition Height="*"/>
+            <!-- Bottom Spacer -->
+        </Grid.RowDefinitions>
+
+        <!-- Background Image -->
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/wpfApp1;component/NewFolder/hospital_2.jpg" Stretch="UniformToFill" Opacity="0.7"/>
+        </Grid.Background>
+
+        <!-- Login Form -->
+        <Border Background="White" Opacity="0.9" Padding="20" CornerRadius="10"
+                Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="350" MinWidth="300">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                <!-- Title -->
+                <TextBlock Text="Login" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+                <!-- Username Field -->
+                <TextBlock Text="Username" FontWeight="Bold" Margin="0,5,0,5"/>
+                <TextBox Name="txtUsername" Margin="0,0,0,10" Height="35" HorizontalAlignment="Stretch" Background="White" BorderBrush="LightGray" BorderThickness="1" Padding="5"/>
+
+                <!-- Password Field -->
+                <TextBlock Text="Password" FontWeight="Bold" Margin="0,5,0,5"/>
+                <PasswordBox Name="txtPassword" Margin="0,0,0,10" Height="35" HorizontalAlignment="Stretch" Background="White" BorderBrush="LightGray" BorderThickness="1" Padding="5"/>
+
+                <!-- Buttons inside the Border -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <!-- Login Button -->
+                    <Button Content="Login" Cursor="Hand" Foreground="White" Width="120" Height="35" Margin="5" Click="LoginButton_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#0078D7"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="Padding" Value="5"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#005A9E"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Background" Value="#004377"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <!-- Register Button -->
+                    <Button Content="Register" Cursor="Hand" Foreground="White" Width="120" Height="35" Margin="5" Click="RegisterButton_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#28A745"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="Padding" Value="5"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#218838"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Background" Value="#1E7E34"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Forgot Password Button (Bottom-Left Corner) -->
+        <Button Content="Forgot Password" Cursor="Hand" Foreground="White" Background="#D32F2F" Width="120" Height="35" Margin="81,0,0,27" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="2" Click="ForgotPasswordButton_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#C2185B"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#9C1C3C"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

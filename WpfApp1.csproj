@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="NewFolder\hospital.jpg" />
+    <None Remove="NewFolder\hospital_10.jpg" />
+    <None Remove="NewFolder\hospital_11.jpg" />
+    <None Remove="NewFolder\hospital_2.jpg" />
+    <None Remove="NewFolder\hospital_4.jpg" />
+    <None Remove="NewFolder\hospital_5.jpg" />
+    <None Remove="NewFolder\hospital_6.jpg" />
+    <None Remove="NewFolder\hospital_7.jpg" />
+    <None Remove="NewFolder\hospital_9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="NewFolder\hospital.jpg" />
+    <Resource Include="NewFolder\hospital_10.jpg" />
+    <Resource Include="NewFolder\hospital_11.jpg" />
+    <Resource Include="NewFolder\hospital_2.jpg" />
+    <Resource Include="NewFolder\hospital_4.jpg" />
+    <Resource Include="NewFolder\hospital_5.jpg" />
+    <Resource Include="NewFolder\hospital_6.jpg" />
+    <Resource Include="NewFolder\hospital_7.jpg" />
+    <Resource Include="NewFolder\hospital_9.jpg" />
+  </ItemGroup>
+
+</Project>
